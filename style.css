@@ -1,0 +1,250 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+:root {
+    --Strong-Cyan: hsl(171, 66%, 44%);
+    --Light-Blue: hsl(233, 100%, 69%);
+    --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+    --Grayish-Blue: hsl(201, 11%, 66%);
+}
+
+p {
+    color: var(--Grayish-Blue);
+    font-weight: 400; 
+}
+
+h1, h2, h3, p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+.max-width {
+    max-width: 760px;
+    padding: 0 20px;
+}
+
+.wrap {
+    background: url(./images/bg-header-desktop.png)  no-repeat center top / contain ;
+    font-size: 18px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.banner, .strong,
+.device, .feature,
+.customers, .download_info {
+    margin-bottom: 100px;
+}
+
+.banner_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner_logo {
+    width: 120px;
+    padding: 100px 0 50px 0;
+}
+
+.banner_logo img {
+    width: 100%;
+}
+
+.download_btn {
+    width: 480px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 40px;
+    font-size: 0.5em;
+    margin: 0 auto;
+}
+
+.download_btn .download_ios,
+.download_btn .download_mac {
+    display: block;
+    border-radius: 999px;
+    text-align: center;
+    padding: 16px 40px;
+    color: #fff;
+}
+
+.download_btn .download_ios {
+    background-color: var(--Strong-Cyan);
+    box-shadow: 0 8px 12px #ccc;
+}
+
+.download_btn .download_mac {
+    background-color: var(--Light-Blue);
+    box-shadow: 0 8px 12px #ccc;
+}
+
+.strong_header {
+    padding-bottom: 64px;
+}
+
+.strong_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.strong_img {
+    width: 760px;
+    margin-left: -360px;
+    margin-right: 100px;
+}
+
+.strong_list {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 36px;
+}
+
+.strong_list h3,
+.strong_list p {
+    text-align: left;
+}
+
+.device_header {
+    padding-bottom: 40px;
+}
+
+.device_img {
+    width: 880px;
+    margin: 0 auto;
+}
+
+.device_img img {
+    width: 100%;
+}
+
+.feature_container {
+    max-width: 1023px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.feature_container div:first-child {
+    width: 100%;
+    padding-bottom: 64px;
+}
+
+.feature_item {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.feature_container p {
+    margin: 0;
+    line-height: 2em;
+}
+
+.feature_item img {
+    width: 40px;
+    padding-bottom: 16px;
+}
+
+.customers {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.customers, 
+.footer_container {
+    max-width: 1078px;
+}
+
+.download_info {
+
+}
+
+.footer {
+    width: 100%;
+    background-color: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+}
+
+.footer_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.footer_logo {
+    height: 64px;
+    padding-top: 26px;
+}
+
+.footer_logo img {
+    height: 100%;
+}
+
+.footer_link {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    flex-grow: 0.5;
+}
+
+.footer_link a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 160px;
+    height: 50%;
+    text-align: center;
+}
+
+.footer_media {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer_media img {
+    width: 24px;
+    padding: 0 10px;
+}
+
+/* .attribution {
+    width: 100%;
+    margin-bottom: -20px;
+} */
