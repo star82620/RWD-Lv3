@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 :root {
@@ -14,10 +14,13 @@ html, body {
 p {
     color: var(--Grayish-Blue);
     font-weight: 400; 
+    text-align: center;
+    line-height: 1.61em;
 }
 
-h1, h2, h3, p {
+h1, h2, h3 {
     text-align: center;
+    color: var(--Dark-Grayish-Blue);
 }
 
 h1 {
@@ -31,6 +34,7 @@ h2 {
 .max-width {
     max-width: 760px;
     padding: 0 20px;
+    margin: 0 auto;
 }
 
 .wrap {
@@ -87,6 +91,7 @@ a {
     text-align: center;
     padding: 16px 40px;
     color: #fff;
+    opacity: 1;
 }
 
 .download_btn .download_ios {
@@ -97,6 +102,11 @@ a {
 .download_btn .download_mac {
     background-color: var(--Light-Blue);
     box-shadow: 0 8px 12px #ccc;
+}
+
+.download_btn .download_ios:hover,
+.download_btn .download_mac:hover {
+    opacity: 0.8;
 }
 
 .strong_header {
@@ -144,18 +154,18 @@ a {
     max-width: 1023px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: flex-start;
     flex-wrap: wrap;
     margin: 0 auto;
 }
 
-.feature_container div:first-child {
-    width: 100%;
+.feature_header {
     padding-bottom: 64px;
 }
 
 .feature_item {
-    width: 320px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -169,7 +179,7 @@ a {
 }
 
 .feature_item img {
-    width: 40px;
+    height: 40px;
     padding-bottom: 16px;
 }
 
@@ -186,17 +196,12 @@ a {
     max-width: 1078px;
 }
 
-.download_info {
-
-}
-
 .footer {
     width: 100%;
     background-color: #eee;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 40px;
 }
 
 .footer_container {
@@ -204,6 +209,7 @@ a {
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
+    padding: 40px;
 }
 
 .footer_logo {
@@ -222,6 +228,7 @@ a {
     align-items:flex-start;
     flex-wrap: wrap;
     flex-grow: 0.5;
+    padding-right: 40px;
 }
 
 .footer_link a {
@@ -233,18 +240,189 @@ a {
     text-align: center;
 }
 
+.footer_link a:hover {
+    color: var(--Strong-Cyan);
+}
+
 .footer_media {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.footer_media img {
+.footer_media a {
     width: 24px;
-    padding: 0 10px;
+    margin: 0 16px;
 }
 
-/* .attribution {
-    width: 100%;
-    margin-bottom: -20px;
-} */
+
+@media (max-width: 1023px) {
+    .wrap {
+        background-image: url("./images/bg-header-mobile.png");
+        font-size: 0.7em;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .banner, .strong,
+    .device, .feature,
+    .customers, .download_info {
+        margin-bottom: 160px;
+    }
+
+    .strong_container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .strong_img,
+    .device_img {
+        max-width: 640px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .strong_img {
+        margin: auto;
+    }
+
+    .strong_img img {
+        width: 100%;
+    }
+
+    .strong_list h3,
+    .strong_list p {
+        text-align: center;
+    }
+
+    .feature_item {
+        max-width: 270px;
+    }
+
+    .customers {
+        width: auto;
+    }
+    
+    .customers img {
+        padding: 16px;
+    }
+
+    .download_btn {
+        max-width: 400px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .download_ios,
+    .download_mac {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 888px) {
+
+    .feature_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature_item {
+        max-width: 480px;
+        width: auto;
+        padding: 40px 36px;
+    }
+
+    .customers {
+        flex-direction: column;
+    }
+
+    .customers img {
+        padding: 36px;
+    }
+
+    .footer_container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer_link {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 40px 0;
+    }
+
+    .footer_link a {
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .max-width {
+        max-width: 400px;
+    }
+
+    .strong_img,
+    .device_img {
+        max-width: 560px;
+    }
+
+    .download_btn {
+        max-width: 320px;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .strong_img,
+    .device_img {
+        max-width: 360px;
+        padding: 0;
+    }
+
+    .strong_img img,
+    .device_img img {
+    }
+
+    .feature_header {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 424px) {
+
+    .max-width {
+        max-width: 280px;
+    }
+
+    .strong_list {
+        width: 280px;
+    }
+
+    .strong_img,
+    .device_img {
+        max-width: 300px;
+    }
+
+    .download_btn {
+        max-width: 210px;
+    }
+
+}
