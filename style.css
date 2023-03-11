@@ -1,6 +1,9 @@
 html, body {
     margin: 0;
     padding: 0;
+}
+
+* {
     box-sizing: border-box;
 }
 
@@ -15,7 +18,7 @@ p {
     color: var(--Grayish-Blue);
     font-weight: 400; 
     text-align: center;
-    line-height: 1.61em;
+    line-height: 1.6rem;
 }
 
 h1, h2, h3 {
@@ -67,7 +70,7 @@ a {
 
 .banner_logo {
     width: 120px;
-    padding: 100px 0 50px 0;
+    margin: 100px 0 50px 0;
 }
 
 .banner_logo img {
@@ -79,9 +82,8 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    padding-top: 40px;
-    font-size: 0.5em;
-    margin: 0 auto;
+    font-size: 0.5rem;
+    margin: 40px auto 0;
 }
 
 .download_btn .download_ios,
@@ -110,7 +112,7 @@ a {
 }
 
 .strong_header {
-    padding-bottom: 64px;
+    margin-bottom: 64px;
 }
 
 .strong_container {
@@ -129,7 +131,7 @@ a {
     width: 400px;
     display: flex;
     flex-direction: column;
-    padding-top: 36px;
+    margin-top: 36px;
 }
 
 .strong_list h3,
@@ -138,7 +140,7 @@ a {
 }
 
 .device_header {
-    padding-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .device_img {
@@ -151,7 +153,7 @@ a {
 }
 
 .feature_container {
-    max-width: 1023px;
+    max-width: 1056px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -161,39 +163,40 @@ a {
 }
 
 .feature_header {
-    padding-bottom: 64px;
+    margin-bottom: 64px;
 }
 
 .feature_item {
-    width: 300px;
+    width: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 16px;
 }
 
 .feature_container p {
     margin: 0;
-    line-height: 2em;
+    line-height: 2rem;
 }
 
 .feature_item img {
     height: 40px;
-    padding-bottom: 16px;
+    margin-bottom: 16px;
 }
 
 .customers {
-    width: 100%;
+    width: 1024px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 40px;
 }
 
 .customers, 
 .footer_container {
-    max-width: 1078px;
+    max-width: 1024px;
 }
 
 .footer {
@@ -208,13 +211,12 @@ a {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     padding: 40px;
 }
 
 .footer_logo {
     height: 64px;
-    padding-top: 26px;
+    margin-top: 26px;
 }
 
 .footer_logo img {
@@ -238,6 +240,7 @@ a {
     width: 160px;
     height: 50%;
     text-align: center;
+    color: var(--Dark-Grayish-Blue);
 }
 
 .footer_link a:hover {
@@ -259,7 +262,7 @@ a {
 @media (max-width: 1023px) {
     .wrap {
         background-image: url("./images/bg-header-mobile.png");
-        font-size: 0.7em;
+        font-size: 0.7rem;
     }
 
     h1 {
@@ -288,8 +291,8 @@ a {
     
     .strong_img,
     .device_img {
-        max-width: 640px;
-        padding: 20px;
+        max-width: 720px;
+        padding: 0 20px;
         display: flex;
         justify-content: center;
     }
@@ -302,70 +305,65 @@ a {
         width: 100%;
     }
 
+    .strong_list {
+        width: 100%;
+    }
+
     .strong_list h3,
     .strong_list p {
         text-align: center;
     }
 
-    .feature_item {
-        max-width: 270px;
-    }
-
-    .customers {
-        width: auto;
-    }
-    
-    .customers img {
-        padding: 16px;
-    }
-
     .download_btn {
-        max-width: 400px;
+        width: 400px;
         flex-direction: column;
         align-items: center;
     }
     
-    .download_ios,
-    .download_mac {
+    .download_btn .download_ios,
+    .download_btn .download_mac {
         width: 100%;
+        padding: 16px 0;
+    }
+    .download_btn .download_ios {
         margin-bottom: 24px;
     }
-}
-
-@media (max-width: 888px) {
 
     .feature_container {
         flex-direction: column;
         align-items: center;
     }
-
+    
     .feature_item {
         max-width: 480px;
         width: auto;
-        padding: 40px 36px;
+        padding: 0 36px;
+        margin-bottom: 48px;
     }
-
+    
     .customers {
         flex-direction: column;
+        width: auto;
     }
-
+    
     .customers img {
-        padding: 36px;
+        padding: 0 16px;
+        margin-bottom: 64px;
     }
-
+    
     .footer_container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-
+    
     .footer_link {
         justify-content: center;
         align-items: center;
         flex-wrap: nowrap;
         padding: 40px 0;
     }
-
+    
     .footer_link a {
         padding: 20px;
         text-align: center;
@@ -374,55 +372,18 @@ a {
     }
 }
 
+
 @media (max-width: 767px) {
     .max-width {
-        max-width: 400px;
+        max-width: 100%;
     }
 
-    .strong_img,
-    .device_img {
-        max-width: 560px;
-    }
-
-    .download_btn {
+    .strong_img, .device_img {
         max-width: 320px;
     }
-    
-}
-
-@media (max-width: 600px) {
-    .strong_img,
-    .device_img {
-        max-width: 360px;
-        padding: 0;
-    }
-
-    .strong_img img,
-    .device_img img {
-    }
-
-    .feature_header {
-        max-width: 400px;
-    }
-}
-
-@media (max-width: 424px) {
-
-    .max-width {
-        max-width: 280px;
-    }
-
-    .strong_list {
-        width: 280px;
-    }
-
-    .strong_img,
-    .device_img {
-        max-width: 300px;
-    }
 
     .download_btn {
-        max-width: 210px;
+        max-width: 270px;
     }
 
 }
